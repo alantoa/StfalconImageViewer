@@ -91,6 +91,7 @@ internal class TransitionImageAnimator(
 
             internalImageContainer.makeViewMatchParent()
             internalImage.makeViewMatchParent()
+            internalImage.scaleType = ImageView.ScaleType.FIT_CENTER
 
             internalRoot.applyMargin(
                 containerPadding[0],
@@ -125,7 +126,7 @@ internal class TransitionImageAnimator(
                     internalImageContainer.applyMargin(left, top, right, bottom)
                 }
             }
-
+            internalImage.scaleType = it.scaleType
             resetRootTranslation()
         }
     }
